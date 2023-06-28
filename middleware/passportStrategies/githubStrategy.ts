@@ -13,8 +13,8 @@ interface Email {
 const githubStrategy: GitHubStrategy = new GitHubStrategy(
     {
         //
-        clientID: "050885d8ba8654db0b3c",
-        clientSecret: "96e320340ee50a8963aae0a49aff7966a9a94df8",
+        clientID: "",
+        clientSecret: "",
         callbackURL: "http://localhost:8003/auth/github/callback",
         passReqToCallback: true,
     },
