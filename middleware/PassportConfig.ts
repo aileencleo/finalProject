@@ -1,5 +1,4 @@
-import passport from 'passport';
-
+import * as passport from "passport";
 import { PassportStrategy } from '../interfaces';
 
 export default class PassportConfig {
@@ -12,9 +11,14 @@ export default class PassportConfig {
      which receives strategies: PassportStrategy[]. Internally...call 
      the addStrategies method within the constructor and make addStragies
      private from the outside world. This way, we can GUARANTEE that our
-     passport strategies are added when this class is created. ⭐️
+     passport strategies are added when this class is created. ⭐️ - done??
     */
-    addStrategies(strategies: PassportStrategy[]): void {
+
+    constructor(strategies: PassportStrategy[]) {
+        this.addStrategies(strategies);
+    }
+
+    private addStrategies(strategies: PassportStrategy[]): void {
         strategies.forEach((passportStrategy: PassportStrategy) => {
             passport.use(passportStrategy.name, passportStrategy.strategy);
         });

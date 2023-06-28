@@ -1,0 +1,15 @@
+.error-message{
+    color:red;
+    font-weight: bold
+}
+
+.btn-github {
+    background-color: #6e5494 !important;
+    border-color: #6e5494 !important;
+    color: white !important;
+}
+
+.m-zero{
+    margin-bottom: 0px;
+}
+  
